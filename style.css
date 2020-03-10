@@ -62,7 +62,7 @@ button:active {
 }
 
 .hero {
-  height: 40vh;
+  height: 50vh;
   display: grid;
   justify-content: center;
   align-content: center;
@@ -97,8 +97,8 @@ button:active {
 }
 
 .card {
-  width: 320px;
-  height: 320px;
+  width: 240px;
+  height: 240px;
   border-radius: 6px;
   box-shadow: darkgray 0 2px 2px;
 }
