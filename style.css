@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  background-color: palegoldenrod;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+button {
+  all: unset;
+  padding: 12px;
+  background-color: chocolate;
+  border-radius: 24px;
+  line-height: 20px;
+  font-weight: 500;
+  color: lightgoldenrodyellow;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #fd8128;
+}
+
+button:active {
+  background-color: #8a4717;
+}
+
+.header {
+  background: url(https://www.managed-web-services.co.uk/wp-content/uploads/2018/06/slide-2-min.jpg) no-repeat rgba(0, 0, 0, 0.8);
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: white;
+}
+
+.navbar {
+  max-width: 600px;
+  margin: 0 0 0 auto;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.hero {
+  height: 40vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  row-gap: 20px;
+}
+
+.buttons {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: flex-start;
+  column-gap: 12px;
+}
