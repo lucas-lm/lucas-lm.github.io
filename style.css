@@ -21,8 +21,17 @@ footer {
   color: white;
 }
 
-a {
+a, a:link, a:visited {
   text-decoration: none;
+  color: #ffa014 !important;
+}
+
+a:hover {
+  color: #FFA726;
+}
+
+a:active {
+  color: #ff9800;
 }
 
 button {
@@ -52,8 +61,27 @@ button:active {
   color: white;
 }
 
-.header a, a:active, a:visited {
+.navbar a, a:visited {
   color: white;
+  font-weight: 400;
+  transition: 200ms;
+}
+
+.navbar a:hover {
+  padding: 6px 9px;
+  border-radius: 24px;
+  font-size: 125%;
+  font-weight: 500;
+  background: white;
+  color: black;
+  transition: 200ms;
+}
+
+.navbar a:active {
+  background: #e0e0e0;
+  color: #424242;
+  font-size: 115%;
+  transition: 50ms;
 }
 
 .navbar {
@@ -146,6 +174,17 @@ button:active {
 
 .social-media a {
   color: #FFB300;
+  transition: 150ms;
+}
+
+.social-media a:hover {
+  font-size: 130%;
+  transition: 250ms;
+  color: yellow;
+}
+
+.social-media a:active {
+  color: darkgoldenrod;
 }
 
 #decksroyale {
