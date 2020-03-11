@@ -1,4 +1,7 @@
 (function() {
+
+  // modeling objects
+
   function Observable() {
     this.observers = []
   }
@@ -26,18 +29,31 @@
   Observer.prototype.notify = function() {}
 
   class Writer extends Observable {
-    constructor(text="", speed=500) {
+    constructor(text="", speed=3) {
       super()
       this.text = text
       this.isTyping = false
       this.isDeleting = false
-      this.speed = speed
+      this.speed = speed // Speed of typing and deleting in letter/seconds
     }
   }
 
   Object.defineProperty(Writer.prototype, "isWaiting", {
     get: function () {
       return !(this.isDeleting || this.isTyping)
+    }
+  })
+
+  Object.defineProperty(Writer.prototype, "timeout", {
+    get: function() {
+      return 1000/this.speed
+    }
+  })
+
+  Object.defineProperty(Writer.prototype, "randomTimeout", {
+    get: function() {
+      const randomSpeed = (Math.random()-0.5)*this.speed // Can add or subtract 50% of the speed
+      return 1000/(this.speed + randomSpeed)
     }
   })
 
@@ -56,7 +72,7 @@
       this.isTyping = true
       this.typeLetter(text[0])
       const rest = text.slice(1)
-      setTimeout(() => this.typeText(rest), this.speed)
+      setTimeout(() => this.typeText(rest), this.randomTimeout)
     } else {
       this.isTyping = false
     }
@@ -67,39 +83,45 @@
     if (this.text !== "" ) {
       this.isDeleting = true
       this.deleteLetter()
-      setTimeout(this.deleteText.bind(this), this.speed)
+      setTimeout(this.deleteText.bind(this), this.randomTimeout)
     } else {
       this.isDeleting = false
     }
     this.notifyAll()
   }
 
+  // real code
+
   const span = document.getElementById('type')
   const text = span.innerText
 
   
-  const writer = new Writer(text, 200)
+  const writer = new Writer(text, 4)
   const observer = new Observer(writer)
   let index = 0
-  const texts = ["web apps", "Pancakes", "whatever you want"]
+  let { texts } = span.dataset
+  texts = JSON.parse(texts)
+  const classes = ['blue', 'red', 'typing-last', 'type-in']
 
   function updateSpan() {
-    if (writer.isWaiting && writer.text !== "" && index !== texts.length) writer.deleteText()
+    if (writer.isWaiting && writer.text !== "" && index !== texts.length) 
+    setTimeout(() => writer.deleteText(), 1000) // delay before start deleting
     if (writer.isWaiting && writer.text === "") {
       writer.typeText(texts[index])
+      span.className = 'typing ' + classes[index]
       index++
     }
     if (index === 3 && writer.isWaiting) {
+      span.className = 'type-in'
       span.setAttribute('contenteditable', true)
+      span.focus()
     }
     span.innerText = writer.text
   }
-
-  writer.deleteText()
-
   observer.notify = updateSpan.bind(observer)
 
-  
+  setTimeout(() => writer.deleteText(), 2500) // delay before start the effect
+
 })()
 
 // Yes, I am aware of the overengineering applied here

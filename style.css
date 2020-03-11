@@ -123,11 +123,32 @@ button:active {
   background-size: contain;
 }
 
-#type::after {
+#type:focus {
+  outline: unset;
+}
+
+#type.blue {
+  color: #9575CD;
+}
+
+#type.red {
+  color: red;
+}
+
+#type.typing-last {
+  animation: rainbow 2s ease alternate infinite;
+}
+
+#type.type-in {
+  color: white;
+  animation: fadeout-rainbow 5s cubic-bezier(0.5, 0.5, 0.5,-0.5)
+}
+
+#type.typing::after {
   content: "\007C";
-  
   font-weight: lighter;
   font-size: 2rem;
+  color: whitesmoke;
   animation: insertion-point 350ms infinite cubic-bezier(1, -0.5, 0, 1.5) alternate;
 }
 
@@ -137,5 +158,48 @@ button:active {
   }
   to {
     opacity: 0;
+  }
+}
+
+@keyframes fadeout-rainbow {
+  0% {
+    color: transparent;
+    background: linear-gradient(45deg, #80DEEA, #AED581, #FFC107, #FF5722, #B71C1C, #4A148C);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  5% {
+    background: linear-gradient(60deg, #80DEEA, #AED581, #FFC107, #FF5722, #B71C1C, #4A148C);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  10% {
+    background: linear-gradient(90deg, #80DEEA, #AED581, #FFC107, #FF5722, #B71C1C, #4A148C);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  100% {
+    color: white;
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    color: #80DEEA;
+  }
+  20% {
+    color: #AED581;
+  }
+  40% {
+    color: #FFC107;
+  }
+  60% {
+    color: #FF5722;
+  }
+  80% {
+    color: #B71C1C;
+  }
+  100% {
+    color: #4A148C;
   }
 }
