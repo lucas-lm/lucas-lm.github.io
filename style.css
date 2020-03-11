@@ -23,7 +23,7 @@ footer {
 
 a, a:link, a:visited {
   text-decoration: none;
-  color: #ffa014 !important;
+  color: #ffa014;
 }
 
 a:hover {
