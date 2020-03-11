@@ -8,7 +8,6 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
-  min-height: 100vh;
   background-color: palegoldenrod;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -61,13 +60,29 @@ button:active {
   color: white;
 }
 
-.navbar a, a:visited {
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navlinks {
+  max-width: 600px;
+  flex-grow: 1;
+  margin: 0 0 0 auto;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.navlinks a, a:visited {
   color: white;
   font-weight: 400;
   transition: 200ms;
 }
 
-.navbar a:hover {
+.navlinks a:hover {
   padding: 6px 9px;
   border-radius: 24px;
   font-size: 125%;
@@ -77,28 +92,24 @@ button:active {
   transition: 200ms;
 }
 
-.navbar a:active {
+.navlinks a:active {
   background: #e0e0e0;
   color: #424242;
   font-size: 115%;
   transition: 50ms;
 }
 
-.navbar {
-  max-width: 600px;
-  margin: 0 0 0 auto;
-  padding-top: 15px;
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-}
-
 .hero {
   height: 50vh;
+  width: 60%;
+  min-width: 600px;
+  min-height: 360px;
+  margin: 0 auto;
   display: grid;
   justify-content: center;
   align-content: center;
   row-gap: 20px;
+  
 }
 
 .hero h1 {
@@ -113,8 +124,8 @@ button:active {
 
 .hero p {
   font-size: 1.3rem;
-  font-weight: 500;
-  line-height: 1.75rem;
+  font-weight: 400;
+  line-height: 150%;
 }
 
 .hero h2.Iam::before {
@@ -135,7 +146,7 @@ button:active {
 }
 
 .works {
-  margin: 12px auto 0;
+  margin: 12px auto;
   display: grid;
   grid-template-rows: auto auto;
   row-gap: 24px;
@@ -187,6 +198,10 @@ button:active {
   color: darkgoldenrod;
 }
 
+#menu {
+  background: none;
+}
+
 #decksroyale {
   background: url(/assets/Thumbs-Up_Princess.png) aliceblue bottom no-repeat;
   background-size: contain;
@@ -202,6 +217,13 @@ button:active {
 
 #type.red {
   color: red;
+}
+
+#type.purple-gradient {
+  color: transparent;
+  background: linear-gradient(90deg, darkviolet,pink, hotpink, purple);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 #type.typing-last {
@@ -271,4 +293,21 @@ button:active {
   100% {
     color: #4A148C;
   }
+}
+
+@media only screen and (max-width: 1024px) {
+
+  html {
+    font-size: 14px;
+  }
+
+  .social-media {
+    display: none;
+  }
+
+  .navlinks {
+    display: none;
+  }
+
+  
 }

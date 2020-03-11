@@ -101,7 +101,7 @@
   let index = 0
   let { texts } = span.dataset
   texts = JSON.parse(texts)
-  const classes = ['blue', 'red', 'typing-last', 'type-in']
+  const classes = ['blue', 'red', 'purple-gradient','typing-last', 'type-in']
 
   function updateSpan() {
     if (writer.isWaiting && writer.text !== "" && index !== texts.length) 
@@ -111,7 +111,7 @@
       span.className = 'typing ' + classes[index]
       index++
     }
-    if (index === 3 && writer.isWaiting) {
+    if (index === texts.length && writer.isWaiting) {
       span.className = 'type-in'
       span.setAttribute('contenteditable', true)
       span.focus()
