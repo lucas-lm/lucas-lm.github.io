@@ -6,6 +6,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
   min-height: 100vh;
   background-color: palegoldenrod;
   -webkit-font-smoothing: antialiased;
@@ -27,9 +29,10 @@ button {
   all: unset;
   padding: 12px;
   background-color: chocolate;
-  border-radius: 24px;
-  line-height: 20px;
-  font-weight: 500;
+  border-radius: 32px;
+  line-height: 125%;
+  font-weight: 700;
+  font-size: 1rem;
   color: lightgoldenrodyellow;
   cursor: pointer;
 }
@@ -56,6 +59,7 @@ button:active {
 .navbar {
   max-width: 600px;
   margin: 0 0 0 auto;
+  padding-top: 15px;
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -67,6 +71,32 @@ button:active {
   justify-content: center;
   align-content: center;
   row-gap: 20px;
+}
+
+.hero h1 {
+  font-weight: 300;
+  font-size: 3rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.75rem;
+}
+
+.hero h2.Iam::before {
+  content: "I am";
+  padding: 0 3px;
+  background: white;
+  color: black;
+  font-size: 115%;
+  font-weight: 100;
+  margin-right: 6px;
 }
 
 .buttons {
@@ -146,8 +176,8 @@ button:active {
 
 #type.typing::after {
   content: "\007C";
-  font-weight: lighter;
-  font-size: 2rem;
+  font-weight: 100;
+  font-size: 150%;
   color: whitesmoke;
   animation: insertion-point 350ms infinite cubic-bezier(1, -0.5, 0, 1.5) alternate;
 }
