@@ -114,7 +114,28 @@ button:active {
   color: #ff6a00;
 }
 
+.social-media a {
+  color: #FFB300;
+}
+
 #decksroyale {
   background: url(/assets/Thumbs-Up_Princess.png) aliceblue bottom no-repeat;
   background-size: contain;
+}
+
+#type::after {
+  content: "\007C";
+  
+  font-weight: lighter;
+  font-size: 2rem;
+  animation: insertion-point 350ms infinite cubic-bezier(1, -0.5, 0, 1.5) alternate;
+}
+
+@keyframes insertion-point {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
