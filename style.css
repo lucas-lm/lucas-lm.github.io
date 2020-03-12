@@ -413,3 +413,13 @@ button:active {
     height: 60%;
   }
 }
+
+@media only screen and (max-width: 425px) {
+  html {
+    font-size: 12px;
+  }
+
+  .hero {
+    min-width: 240px;
+  }
+}
