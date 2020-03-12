@@ -76,10 +76,13 @@ button:active {
   list-style: none;
 }
 
+.navlinks img {
+  display: none;
+}
+
 .navlinks a, a:visited {
   color: white;
   font-weight: 400;
-  transition: 200ms;
 }
 
 .navlinks a:hover {
@@ -198,8 +201,23 @@ button:active {
   color: darkgoldenrod;
 }
 
+.backdrop {
+  opacity: 0.9;
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+}
+
+.hide-medium {
+  visibility: visible !important;
+}
+
 #menu {
-  background: none;
+  display: none;
 }
 
 #decksroyale {
@@ -295,10 +313,28 @@ button:active {
   }
 }
 
+@keyframes slide-navbar {
+  from {
+    right: -240px;
+  }
+  to {
+    right: 0;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
 
   html {
     font-size: 14px;
+  }
+
+  #menu {
+    display: inline;
+    background: none;
+  }
+
+  .hide-medium {
+    visibility: hidden !important;
   }
 
   .social-media {
@@ -306,8 +342,60 @@ button:active {
   }
 
   .navlinks {
-    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1100;
+    width: 0;
+    height: 100vh;
+    padding-top: 15px;
+    display: grid;
+    align-content: start;
+    justify-content: stretch;
+    overflow-x: hidden;
+    list-style: none;
+    border-left: #FF5722 solid 6px;
+    background: palegoldenrod;
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 400ms;
   }
 
+  .navlinks img {
+    display: block;
+  }
+
+  .navlinks li {
+    width: inherit;
+    min-width: 240px;
+    padding-left: 12px;
+    border-bottom: #673009 solid 1px;
+  }
+
+  .navlinks li:last-child {
+    border: none;
+  }
+
+  .navlinks a {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 250%;
+    color: #673009;
+  }
+
+  .navlinks a:hover {
+    background: none;
+    color: #bf2e00;
+    padding: 6px 9px;
+    font-size: 150%;
+    font-weight: 600;
+    transition: 200ms;
+  }
+  
+  .navlinks a:active {
+    background: none;
+    color: #940000;
+    font-size: 130%;
+    transition: 50ms;
+  }
   
 }
