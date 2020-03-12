@@ -54,6 +54,7 @@ button:active {
 }
 
 .header {
+  padding: 12px 0;
   background: url(https://www.managed-web-services.co.uk/wp-content/uploads/2018/06/slide-2-min.jpg) no-repeat rgba(0, 0, 0, 0.8);
   background-size: cover;
   background-blend-mode: multiply;
@@ -70,7 +71,6 @@ button:active {
   max-width: 600px;
   flex-grow: 1;
   margin: 0 0 0 auto;
-  padding-top: 15px;
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -83,6 +83,7 @@ button:active {
 .navlinks a, a:visited {
   color: white;
   font-weight: 400;
+  transition: 300ms;
 }
 
 .navlinks a:hover {
@@ -380,6 +381,7 @@ button:active {
     font-weight: 500;
     line-height: 250%;
     color: #673009;
+    transition: 300ms;
   }
 
   .navlinks a:hover {
@@ -408,7 +410,6 @@ button:active {
 
   .hero {
     min-width: 360px;
-    min-height: 0;
-    height: 600px;
+    height: 60%;
   }
 }

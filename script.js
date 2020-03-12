@@ -94,18 +94,20 @@
 
   const span = document.getElementById('type')
   const text = span.innerText
-
-  
-  const writer = new Writer(text, 4)
-  const observer = new Observer(writer)
-  let index = 0
-  let { texts } = span.dataset
+  let { texts='[]', speed=5, interval=2 } = span.dataset
   texts = JSON.parse(texts)
+  speed = Number(speed)
+  interval = Number(interval)
+  
+  const writer = new Writer(text, speed)
+  const observer = new Observer(writer)
+  
   const classes = ['blue', 'red', 'purple-gradient','typing-last', 'type-in']
+  let index = 0
 
   function updateSpan() {
     if (writer.isWaiting && writer.text !== "" && index !== texts.length) 
-    setTimeout(() => writer.deleteText(), 1000) // delay before start deleting
+    setTimeout(() => writer.deleteText(), interval*1000) // delay before start deleting
     if (writer.isWaiting && writer.text === "") {
       writer.typeText(texts[index])
       span.className = 'typing ' + classes[index]
@@ -114,12 +116,11 @@
     if (index === texts.length && writer.isWaiting) {
       span.className = 'type-in'
       span.setAttribute('contenteditable', true)
-      span.focus()
     }
     span.innerText = writer.text
   }
-  observer.notify = updateSpan.bind(observer)
 
+  observer.notify = updateSpan.bind(observer)
   setTimeout(() => writer.deleteText(), 2500) // delay before start the effect
 
 })()
