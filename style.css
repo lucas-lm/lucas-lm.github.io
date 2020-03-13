@@ -104,13 +104,12 @@ button:active {
 }
 
 .hero {
-  height: 50vh;
-  width: 60%;
-  min-width: 600px;
-  min-height: 420px;
-  margin: 0 auto;
+  height: 40vh;
+  width: 612px;
+  min-height: 372px;
+  margin: 12px auto 0;
   display: grid;
-  justify-content: center;
+  justify-content: stretch;
   align-content: center;
   row-gap: 36px;
   
@@ -342,6 +341,10 @@ button:active {
     display: none;
   }
 
+  .hero {
+    width: 60%;
+  }
+
   .navlinks {
     position: fixed;
     right: 0;
@@ -420,6 +423,6 @@ button:active {
   }
 
   .hero {
-    min-width: 240px;
+    min-width: 300px;
   }
 }
