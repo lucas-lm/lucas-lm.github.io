@@ -149,9 +149,9 @@ button:active {
 }
 
 .works {
+  max-width: 85%;
   margin: 12px auto;
   display: grid;
-  grid-template-rows: auto auto;
   row-gap: 24px;
   justify-content: center;
   align-content: center;
@@ -163,16 +163,64 @@ button:active {
 }
 
 .cards-container {
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: auto;
   display: grid;
   grid-auto-flow: column;
+  justify-content: start;
   column-gap: 18px;
 }
 
 .card {
-  width: 240px;
-  height: 240px;
+  width: 300px;
+  border: 1px solid #ccc;
+  padding: 12px 18px;
   border-radius: 6px;
   box-shadow: darkgray 0 2px 2px;
+  background: aliceblue;
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: 18px;
+  justify-content: center;
+  align-content: center;
+}
+
+.card:hover {
+  border: solid 1px #000;
+}
+
+.card img {
+  max-width: 240px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.card button {
+  border: darkgreen solid 1px;
+  border-radius: 3px;
+  background: none;
+  color: darkgreen;
+  line-height: 0;
+  transition: 100ms;
+}
+
+.card button:hover {
+  background: #d3f9c3;
+}
+
+.card button:active {
+  background: forestgreen;
+  color: #d3f9c3;
+}
+
+.card h2 {
+  line-height: 2em;
+}
+
+.card p {
+  line-height: 1.5em;
 }
 
 .social-media {
@@ -218,11 +266,6 @@ button:active {
 
 #menu {
   display: none;
-}
-
-#decksroyale {
-  background: url(/assets/Thumbs-Up_Princess.png) aliceblue bottom no-repeat;
-  background-size: contain;
 }
 
 #type:focus {
@@ -324,7 +367,7 @@ button:active {
 
 @media only screen and (max-width: 1024px) {
 
-  html {
+  :root {
     font-size: 14px;
   }
 
@@ -407,10 +450,6 @@ button:active {
 
 @media only screen and (max-width: 768px) {
 
-  .works {
-    display: none;
-  }
-
   .hero {
     min-width: 360px;
     height: 60%;
@@ -418,7 +457,7 @@ button:active {
 }
 
 @media only screen and (max-width: 425px) {
-  html {
+  :root {
     font-size: 12px;
   }
 
