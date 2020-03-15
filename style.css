@@ -164,30 +164,34 @@ button:active {
 
 .cards-container {
   max-width: 100%;
-  margin: 0 auto;
   overflow-x: auto;
-  display: grid;
-  grid-auto-flow: column;
-  justify-content: start;
-  column-gap: 18px;
+  display: flex;
+  background: #67300926;
+  border-radius: 3px;
+}
+
+.cards-container:last-child::after {
+  content: 'l';
+  color: transparent;
 }
 
 .card {
   width: 300px;
-  border: 1px solid #ccc;
+  margin: 12px;
   padding: 12px 18px;
   border-radius: 6px;
-  box-shadow: darkgray 0 2px 2px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
   background: aliceblue;
   display: grid;
   grid-auto-flow: row;
   row-gap: 18px;
   justify-content: center;
   align-content: center;
+  transition: 300ms;
 }
 
 .card:hover {
-  border: solid 1px #000;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
 }
 
 .card img {
