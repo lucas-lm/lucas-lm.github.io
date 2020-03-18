@@ -92,8 +92,8 @@
     context.beginPath()
     context.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
     context.strokeStyle = 'transparent'
-    context.shadowColor = this.color
-    context.shadowBlur = this.shine
+    //context.shadowColor = this.color
+    //context.shadowBlur = this.shine
     context.fillStyle = this.color
     context.fill()
     context.stroke()
