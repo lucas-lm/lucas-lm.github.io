@@ -101,7 +101,8 @@
   }
 
   // Function to keep the coerence of the canvas size
-  function resizeCanvasToDisplaySize(canvas) {
+  function resizeCanvasToDisplaySize(context) {
+    const { canvas } = context
     const { devicePixelRatio=1 } = window
     const backingStoreRatio = (
       context.webkitBackingStorePixelRatio ||
@@ -141,7 +142,7 @@
 
     const render = () => {
       ctx.save()
-      resizeCanvasToDisplaySize(ctx.canvas)
+      resizeCanvasToDisplaySize(ctx)
       const { width, height } = ctx.canvas
       ctx.clearRect(0, 0, width, height)
       // draw
