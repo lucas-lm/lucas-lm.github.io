@@ -18,10 +18,7 @@
 
   const menuIcon = document.querySelector("#menu")
   const navMenu = document.querySelector("#nav-menu")
-  const backdrop = document.createElement("div")
-  backdrop.style.display = 'none'
-  backdrop.className = 'backdrop'
+  const backdrop = document.querySelector(".backdrop")
   backdrop.addEventListener('click', closeMenu)
   menu.addEventListener('click', openMenu)
-  document.body.appendChild(backdrop)
 })()
