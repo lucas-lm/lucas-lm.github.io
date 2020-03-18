@@ -93,7 +93,7 @@
     context.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
     context.strokeStyle = 'transparent'
     //context.shadowColor = this.color
-    //context.shadowBlur = this.shine
+    //context.shadowBlur = this.shine // It causes performance issues on chrome for android...
     context.fillStyle = this.color
     context.fill()
     context.stroke()
@@ -135,8 +135,11 @@
     for (let i=0; i<50; i++) {
       const radius = random(1, 5)
       const star = new Star(0, 0, radius, 'white', 0)
-      star.blue = randomInt(255) // Little hack: this prop doesn't even exists on Star class...
-      star.red = randomInt(255, 200) // Little hack: this prop doesn't even exists on Star class...
+      star.blue = randomInt(255) // Little hacky: this prop doesn't even exists on Star class...
+      star.red = randomInt(255, 200) // Little hacky: this prop doesn't even exists on Star class...
+      star.speedY = random(0.3)
+      star.speedX = 0
+      star.A = random(0.12)
       stars.push(star)
     }
 
@@ -149,16 +152,24 @@
       for (let star of stars) {
         const { age, lifeSpan } = star
         const fade = Math.max(0, 1 - age/lifeSpan)
-        star.draw(ctx)
         star.color = `rgba(${star.red}, ${Math.round(255*fade)}, ${star.blue}, ${fade})`
+        star.speedX += star.A*random(0.2, -0.2)
+        star.x += star.speedX
+        star.y += star.speedY
+        star.radius += 0.03
         if (star.isDead) {
           star.reborn()
-          star.blue = randomInt(255) // Little hack: this prop doesn't even exists on Star class...
-          star.red = randomInt(255) // Little hack: this prop doesn't even exists on Star class...
-          star.lifeSpan = randomInt(3000, 20000)
+          star.radius = random(1, 5)
+          star.blue = randomInt(255) // Little hacky: this prop doesn't even exists on Star class...
+          star.red = randomInt(255) // Little hacky: this prop doesn't even exists on Star class...
+          star.speedY = random(0.3)
+          star.speedX = 0
+          star.A = random(0.12)
+          star.lifeSpan = randomInt(2000, 7000)
           star.x = randomInt(star.radius, ctx.canvas.width-star.radius)
           star.y = randomInt(star.radius, ctx.canvas.height-star.radius)
         }
+        star.draw(ctx)
       }
       // end draw
       index++

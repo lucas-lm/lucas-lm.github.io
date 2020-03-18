@@ -114,17 +114,20 @@ button:active {
   
 }
 
+.hero h1, .hero h2, .hero p {
+  background: #222222c0;
+  border-radius: 6px;
+}
+
 .hero h1 {
   font-weight: 300;
   font-size: 3rem;
-  background: #222222d0;
 }
 
 .hero h2 {
   justify-self: start;
   font-size: 2.5rem;
   font-weight: 300;
-  background: #222222d0;
   cursor: pointer;
 }
 
@@ -141,7 +144,7 @@ button:active {
 
 .hero h2::after {
   content: '';
-  width: 0px;
+  width: 0;
   height: 1px;
   display: block;
   background: white;
@@ -156,7 +159,6 @@ button:active {
   font-size: 1.3rem;
   font-weight: 400;
   line-height: 150%;
-  background: #222222d0;
 }
 
 .buttons {
