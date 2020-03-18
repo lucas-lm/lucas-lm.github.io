@@ -102,16 +102,25 @@
 
   // Function to keep the coerence of the canvas size
   function resizeCanvasToDisplaySize(canvas) {
-    const width = canvas.clientWidth;
-    const height = canvas.clientHeight;
+    const { devicePixelRatio=1 } = window
+    const backingStoreRatio = (
+      context.webkitBackingStorePixelRatio ||
+      context.mozBackingStorePixelRatio ||
+      context.msBackingStorePixelRatio ||
+      context.oBackingStorePixelRatio ||
+      context.backingStorePixelRatio || 1
+    )
+    const ratio = devicePixelRatio/backingStoreRatio
+    const width = canvas.clientWidth
+    const height = canvas.clientHeight
 
     if (canvas.width !== width || canvas.height !== height) {
-      canvas.width = width;
-      canvas.height = height;
-      return true;
+      canvas.width = width*ratio
+      canvas.height = height*ratio
+      return true
     }
 
-    return false;
+    return false
   }
 
   // Bootstrap the animation
