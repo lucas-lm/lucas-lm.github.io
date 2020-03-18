@@ -156,7 +156,7 @@
         star.speedX += star.A*random(0.2, -0.2)
         star.x += star.speedX
         star.y += star.speedY
-        star.radius += 0.03
+        star.radius += 0.035
         if (star.isDead) {
           star.reborn()
           star.radius = random(1, 5)
