@@ -189,6 +189,7 @@ button:active {
 
 .cards-container {
   max-width: 100%;
+  justify-self: center;
   overflow-x: auto;
   display: flex;
   background: #67300926;
@@ -299,8 +300,8 @@ button:active {
   z-index: 1100;
   top: 50%;
   left: 50%;
-  transform-origin: 0% 0%;
-  transform: translate(-50%, -50%) scale(0) skew(30deg, 20deg);
+  transform-origin: 10% 20%;
+  transform: translate(-50%, -50%) scale(0) skew(20deg, 45deg);
   margin: 0;
   padding: 18px;
   background-image: linear-gradient(45deg, aliceblue, palegoldenrod);

@@ -101,23 +101,15 @@
   }
 
   // Function to keep the coerence of the canvas size
-  function resizeCanvasToDisplaySize(context) {
-    const { canvas } = context
-    const { devicePixelRatio=1 } = window
-    const backingStoreRatio = (
-      context.webkitBackingStorePixelRatio ||
-      context.mozBackingStorePixelRatio ||
-      context.msBackingStorePixelRatio ||
-      context.oBackingStorePixelRatio ||
-      context.backingStorePixelRatio || 1
-    )
-    const ratio = devicePixelRatio/backingStoreRatio
-    const width = canvas.clientWidth
-    const height = canvas.clientHeight
-
+  function resizeCanvasToDisplaySize(canvas) {
+    const { width, height } = canvas.getBoundingClientRect()
+    
     if (canvas.width !== width || canvas.height !== height) {
+      const { devicePixelRatio:ratio=1 } = window
+      const context = canvas.getContext('2d')
       canvas.width = width*ratio
       canvas.height = height*ratio
+      context.scale(ratio, ratio)
       return true
     }
 
@@ -145,7 +137,7 @@
 
     const render = () => {
       ctx.save()
-      resizeCanvasToDisplaySize(ctx)
+      resizeCanvasToDisplaySize(canvas)
       const { width, height } = ctx.canvas
       ctx.clearRect(0, 0, width, height)
       // draw
