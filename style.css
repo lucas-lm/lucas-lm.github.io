@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -187,6 +191,22 @@ a:visited {
 }
 
 .works h1 {
+  font-size: 2rem;
+  color: #673009;
+}
+
+.skills {
+  max-width: 85%;
+  margin: 12px auto;
+}
+
+.skills img {
+  display: inline-block;
+  height: 120px;
+  width: auto;
+}
+
+.skills h1 {
   font-size: 2rem;
   color: #673009;
 }
