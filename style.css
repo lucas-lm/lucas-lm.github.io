@@ -593,4 +593,9 @@ a:visited {
   .hero {
     min-width: 300px;
   }
+
+  .skills img {
+    max-width: 30%;
+    height: auto;
+  }
 }
