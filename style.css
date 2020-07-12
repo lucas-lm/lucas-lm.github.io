@@ -19,9 +19,30 @@ body {
 }
 
 footer {
-  padding: 18px;
   background: #333;
   color: white;
+  display: grid;
+  place-items: center;
+}
+
+footer section.social {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 2.5rem;
+  justify-content: space-around;
+  max-width: 90%;
+  min-width: 256px;
+  margin: 16px auto;
+}
+
+footer section.social a {
+  color: white;
+  transform: scale(0.8);
+  transition: 200ms;
+}
+
+footer section.social a:hover {
+  transform: scale(1);
 }
 
 a,
@@ -282,32 +303,6 @@ a:visited {
 
 .card p {
   line-height: 1.5em;
-}
-
-.social-media {
-  position: fixed;
-  left: 32px;
-  top: 15%;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  color: #ff6a00;
-}
-
-.social-media a {
-  color: #ffb300;
-  transition: 150ms;
-}
-
-.social-media a:hover {
-  font-size: 130%;
-  transition: 250ms;
-  color: yellow;
-}
-
-.social-media a:active {
-  color: darkgoldenrod;
 }
 
 .backdrop {
