@@ -37,8 +37,8 @@ footer section.social {
 
 footer section.social a {
   color: white;
-  transform: scale(0.8);
-  transition: 200ms;
+  transform: scale(0.75);
+  transition: transform 200ms ease-in-out;
 }
 
 footer section.social a:hover {
@@ -202,7 +202,7 @@ a:visited {
   column-gap: 12px;
 }
 
-.works {
+section#works {
   max-width: 85%;
   margin: 24px auto;
   display: grid;
@@ -211,17 +211,17 @@ a:visited {
   align-content: center;
 }
 
-.works h1 {
+section#works h1 {
   font-size: 2rem;
   color: #673009;
 }
 
-.skills {
+section#skills {
   max-width: 85%;
   margin: 24px auto;
 }
 
-.skills img {
+section#skills img {
   display: inline-block;
   max-width: 180px;
   max-height: 120px;
@@ -230,7 +230,28 @@ a:visited {
   margin-right: 16px;
 }
 
-.skills h1 {
+section#skills h1 {
+  font-size: 2rem;
+  color: #673009;
+}
+
+section#contact {
+  max-width: 85%;
+  margin: 24px auto;
+}
+
+section#contact ul {
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+section#contact ul > li > a {
+  line-height: 1.7;
+  color: black;
+}
+
+section#contact h1 {
+  margin: 8px 0;
   font-size: 2rem;
   color: #673009;
 }
