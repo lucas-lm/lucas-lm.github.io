@@ -242,12 +242,31 @@ section#contact {
 
 section#contact ul {
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  background-color: #ff56221c;
+  border-left: solid 8px #6730095b;
+  padding: 8px;
 }
 
 section#contact ul > li > a {
-  line-height: 1.7;
-  color: black;
+  color: #000000d0;
+  display: inline-block;
+  margin: 4px 0;
+}
+
+section#contact ul > li > a::after {
+  content: '';
+  margin-top: -3px;
+  background-color: black;
+  height: 1px;
+  width: 0;
+  display: block;
+  transition: 400ms;
+}
+
+section#contact ul > li > a:hover::after {
+  width: 100%;
 }
 
 section#contact h1 {
