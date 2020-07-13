@@ -258,6 +258,13 @@ section#contact ul > li > a:hover::after {
   width: 100%;
 }
 
+hr {
+  border: 0;
+  height: 1px;
+  margin: 40px 0;
+  background-image: linear-gradient(to right, #00000000, #00000025, #00000000);
+}
+
 .cards-container {
   max-width: 100%;
   justify-self: center;
@@ -334,6 +341,7 @@ section#contact ul > li > a:hover::after {
 .card p {
   line-height: 1.5;
   font-weight: 400;
+  font-size: 1rem;
   color: #000000e0;
 }
 
