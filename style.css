@@ -239,9 +239,9 @@ section#contact ul {
 }
 
 section#contact ul > li > a {
-  color: #000000d0;
+  color: #000000ca;
   display: inline-block;
-  margin: 4px 0;
+  margin: 8px 0;
 }
 
 section#contact ul > li > a::after {
