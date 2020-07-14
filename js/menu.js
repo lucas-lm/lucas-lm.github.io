@@ -1,5 +1,4 @@
-(function() {
-  
+;(function () {
   const openMenu = () => {
     menuIcon.classList.add('hide')
     navMenu.classList.remove('hide-medium')
@@ -16,9 +15,11 @@
     document.body.removeAttribute('style')
   }
 
-  const menuIcon = document.querySelector("#menu")
-  const navMenu = document.querySelector("#nav-menu")
-  const backdrop = document.querySelector(".backdrop")
+  const menuIcon = document.querySelector('#menu')
+  const navMenu = document.querySelector('#nav-menu')
+  const navLink = document.querySelectorAll('a.navlink')
+  navLink.forEach((link) => link.addEventListener('click', closeMenu))
+  const backdrop = document.querySelector('.backdrop')
   backdrop.addEventListener('click', closeMenu)
   menu.addEventListener('click', openMenu)
 })()
