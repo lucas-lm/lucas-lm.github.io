@@ -12,7 +12,7 @@
 [![Twitter Badge](https://img.shields.io/badge/Twitter--000?style=social&logo=twitter&logoColor=1DA1F2&link=https://www.twitter.com/__lucas_lm/)](https://www.twitter.com/__lucas_lm/)
 [![Outlook Badge](https://img.shields.io/badge/email--000?style=social&logo=microsoft-outlook&logoColor=0078d4&link=mailto:lucas-m@outlook.com)](mailto:lucas-m@outlook.com)
 
-**My personal website.**
+Welcome to my personal website repo. Simple pages written with the good old vanilla javascript, html and css.
 
 ![Demo](static/demo.gif)
 
@@ -25,7 +25,7 @@
 ## About
 
 This is my personal website where I share some contact information, showcase done works and my expertises.
-It is a simple website made in vanilla javascript, html and css.
+It is a simple website made in vanilla javascript, html, css and hosted by github pages.
 
 ## Technologies
 
