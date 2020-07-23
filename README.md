@@ -2,7 +2,7 @@
 
 # Lucas Miranda | @lucas-lm
 
-![Website](https://img.shields.io/website?down_message=dead&label=website&up_message=alive&url=https%3A%2F%2Fwisegoat.now.sh)
+![Website](https://img.shields.io/website?down_message=dead&label=website&up_message=online&url=https%3A%2F%2Fwisegoat.now.sh)
 ![GitHub last commit](https://img.shields.io/github/last-commit/lucas-lm/lucas-lm.github.io)
 ![GitHub](https://img.shields.io/github/license/lucas-lm/lucas-lm.github.io)
 
@@ -14,7 +14,7 @@
 
 **My personal website.**
 
-<!-- Demo aqui -->
+![Demo](static/demo.gif)
 
 # Table of Contents
   - [About](#about)
