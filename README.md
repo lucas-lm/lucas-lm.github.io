@@ -40,7 +40,7 @@ The project is a bunch of static files, so you just have to download or clone th
 
 If you like command line, make sure you have git installed in your machine and run the command:
 ```sh
-> git clone https://github.com/lucas-lm/lucas-lm.github.io.git
+git clone https://github.com/lucas-lm/lucas-lm.github.io.git
 ```
 
 If you are not a CLI person, click on the green button "Code" on the top of this page and click in the "Download ZIP" option. After download ends, unzip it to a folder of your choice and you are done. 
