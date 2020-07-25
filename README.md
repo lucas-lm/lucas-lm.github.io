@@ -17,6 +17,9 @@ Welcome to my personal website repo. Simple pages written with the good old vani
 ![Demo](static/demo.gif)
 
 # Table of Contents
+
+- [Lucas Miranda | @lucas-lm](#lucas-miranda--lucas-lm)
+- [Table of Contents](#table-of-contents)
   - [About](#about)
   - [Technologies](#technologies)
   - [Get Started](#get-started)
@@ -39,11 +42,12 @@ It is a simple website made in vanilla javascript, html, css and hosted by githu
 The project is a bunch of static files, so you just have to download or clone this repo and start editing in your code editor.
 
 If you like command line, make sure you have git installed in your machine and run the command:
+
 ```sh
 git clone https://github.com/lucas-lm/lucas-lm.github.io.git
 ```
 
-If you are not a CLI person, click on the green button "Code" on the top of this page and click in the "Download ZIP" option. After download ends, unzip it to a folder of your choice and you are done. 
+If you are not a CLI person, click on the green button "Code" on the top of this page and click in the "Download ZIP" option. After download ends, unzip it to a folder of your choice and you are done.
 
 Open the folder in your code editor and edit the code :sparkles:
 
@@ -58,5 +62,6 @@ All contributions are welcome:
 
 ## To do
 
+- [ ] Refactor code
 - [ ] Blog page
 - [ ] Blog articles page
