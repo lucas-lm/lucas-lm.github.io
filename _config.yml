@@ -35,9 +35,6 @@ theme: minima
 plugins:
   - jekyll-feed
 
-minima:
-  hide_site_feed_link: true
-
 header_pages:
   - index.md
   - about.md
