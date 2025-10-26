@@ -6,7 +6,7 @@ date:   2023-08-23 00:00:00 -0300
 category: python
 ---
 
-Se você já trabalhou em projetos Python usando `pip` e `venv` para gerenciar suas dependências, já está familiarizado com os passos necessários para manter tudo em um estado consistente. Eu já escrevi sobre isso antes em [Ambientes Virtuais em Python](https://medium.com/@pdx.lucasm/python-virtual-environments-18ee3e8d2c3f) e [Entendendo o pip](https://medium.com/@pdx.lucasm/understanding-pip-the-package-installer-for-python-d3401de7072a), e precisamos concordar que é bem chato gerenciar arquivos `requirements.txt`, ambientes virtuais e grupos de dependências (como dependências de desenvolvimento, de CI/CD etc.).  
+Se você já trabalhou em projetos Python usando `pip` e `venv` para gerenciar suas dependências, já está familiarizado com os passos necessários para manter tudo em um estado consistente. Eu já escrevi sobre isso antes em [Ambientes Virtuais em Python](/python/2023/06/26/venv.html) e [Entendendo o pip](/python/2023/07/31/pip.html), e precisamos concordar que é bem chato gerenciar arquivos `requirements.txt`, ambientes virtuais e grupos de dependências (como dependências de desenvolvimento, de CI/CD etc.).  
 É tão chato que os desenvolvedores Python decidiram criar um novo gerenciador de dependências para cuidar dessas tarefas. Estou falando do [Poetry](https://python-poetry.org/), uma ferramenta muito popular na comunidade Python para gerenciar dependências, empacotamento e publicação de pacotes.
 
 ## Poetry vs pip + venv
