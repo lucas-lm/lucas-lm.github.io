@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "Poetry: um gerenciador de pacotes completo para projetos Python"
+excerpt: |
+    Este artigo aprenseta o Poetry como ferramenta para simplificar o gerenciamento de dependências, ambientes virtuais e empacotamento em projetos Python.
 author: Lucas Miranda
 date:   2023-08-23 00:00:00 -0300
 category: python
